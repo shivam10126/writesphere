@@ -2,7 +2,59 @@ export const initialBlogs = [
   {
     id: "1",
     title: "Introduction to React Hooks",
-    content: "React Hooks are a revolutionary feature introduced in React 16.8 that transformed the way developers build React applications. Before hooks, stateful logic and side effects were typically handled using class components. However, hooks bring the same functionality into functional components, making code simpler and more reusable.\n\n### Why Use React Hooks?\nHooks solve many problems developers face when writing React components. They allow you to extract stateful logic, making it easier to test and reuse across components. This eliminates the need for complex lifecycle methods in class components.\n\n### The useState Hook\nThe `useState` hook lets you add state to functional components. For example:\n\n```javascript\nimport React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n\n  return (\n    <div>\n      <p>You clicked {count} times</p>\n      <button onClick={() => setCount(count + 1)}>\n        Click me\n      </button>\n    </div>\n  );\n}\n```\n\nThis hook is perfect for managing simple state like counters, toggles, or form inputs.\n\n### The useEffect Hook\nThe `useEffect` hook enables you to perform side effects in functional components, such as data fetching, subscriptions, or DOM updates. Here's a basic example:\n\n```javascript\nimport React, { useState, useEffect } from 'react';\n\nfunction DocumentTitleUpdater() {\n  const [count, setCount] = useState(0);\n\n  useEffect(() => {\n    document.title = `You clicked ${count} times`;\n  }, [count]);\n\n  return (\n    <div>\n      <p>You clicked {count} times</p>\n      <button onClick={() => setCount(count + 1)}>\n        Click me\n      </button>\n    </div>\n  );\n}\n```\n\n### Conclusion\nBy mastering hooks like `useState` and `useEffect`, you can write cleaner, more maintainable React code. Hooks encourage functional programming principles, making your codebase more predictable and easier to understand.",
+    content: `React Hooks are a revolutionary feature introduced in React 16.8 that transformed the way developers build React applications. Before hooks, stateful logic and side effects were typically handled using class components. However, hooks bring the same functionality into functional components, making code simpler and more reusable.
+
+### Why Use React Hooks?
+Hooks solve many problems developers face when writing React components. They allow you to extract stateful logic, making it easier to test and reuse across components. This eliminates the need for complex lifecycle methods in class components.
+
+### The useState Hook
+The \`useState\` hook lets you add state to functional components. For example:
+
+\`\`\`javascript
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+\`\`\`
+
+This hook is perfect for managing simple state like counters, toggles, or form inputs.
+
+### The useEffect Hook
+The \`useEffect\` hook enables you to perform side effects in functional components, such as data fetching, subscriptions, or DOM updates. Here's a basic example:
+
+\`\`\`javascript
+import React, { useState, useEffect } from 'react';
+
+function DocumentTitleUpdater() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = \`You clicked ${count} times\`;
+  }, [count]);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+\`\`\`
+
+### Conclusion
+By mastering hooks like \`useState\` and \`useEffect\`, you can write cleaner, more maintainable React code. Hooks encourage functional programming principles, making your codebase more predictable and easier to understand.`,
     author: "Jane Doe",
     description: "An introduction to React Hooks and how they can simplify your React components.",
     tags: ["React", "JavaScript", "Web Development"],
